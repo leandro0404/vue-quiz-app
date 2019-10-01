@@ -8,7 +8,7 @@
 <script>
 import Login from './components/Login.vue'
 import Question from './components/Question.vue'
-import data from './data/data.js'
+import data from './data/data.vue'
 
 export default {
   name: 'app',

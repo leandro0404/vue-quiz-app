@@ -1,3 +1,5 @@
+<script>
+
 export default 
 ﻿[
   {
@@ -140,3 +142,5 @@ export default
       "jogado": false
   }
 ]
+
+</script>
