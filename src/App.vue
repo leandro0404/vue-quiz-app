@@ -2,7 +2,7 @@
   <div id="app">
     <Login   v-model="email" v-if="email === null"/>
     <Question v-on:save="onSave" v-if="email !== null && !endGame"  :showConfirm="showConfirm" :anwswer="anwswers[questionsAnswered]" />
-    <Score  v-if="endGame"/>
+    <Score  :score='score' :questionsAnswered="questionsAnswered"  v-if="endGame"/>
   </div>
 </template>
 
