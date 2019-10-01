@@ -1,37 +1,36 @@
 <template>
         <div id="frame">
-             <img alt="Vue logo" src="../assets/logo.png">
-            <h3 className="login-title">Este desafio consiste em responder um Quiz técnico sobre o tema desta oficina. Entre com seu email para iniciar o desafio.</h3>
-                <form id="form-login" className="form-inline">
-                <input type="text" id="email" name="email" placeholder="Digite seu e-mail" className="form-control"/>
-                <button type="button" id="start" name="start" className="btn btn-primary" onClick={this.isEmailClick.bind(this)} >Iniciar</button>
+             <img  class="login-logo" alt="Vue logo" src="../assets/logo.png">
+            <h3 class="login-title">Este desafio consiste em responder um Quiz técnico sobre o tema desta oficina. Entre com seu email para iniciar o desafio.</h3>
+                <form id="form-login" class="form-inline">
+                <input  id="email" type="text" v-bind:value="email"  placeholder="Digite seu e-mail" class="form-control"/>
+                <button type="button" id="start" name="start" class="btn btn-primary" @click="updateValue" >Iniciar</button>
                 </form>
-        </div>  
+        </div>          
 </template>
 
 <script>
+
+  function isEmail(email){
+      debugger
+      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      return regex.test(email);
+
+    }
+
 export default {
   name: 'Login',
   props: {
-    msg: String
+    email: String
+  },
+   methods: {
+    updateValue: function () {
+     console.log(this.props)
+     debugger
+     if(isEmail(document.getElementById("email").value))
+      this.$emit('input', document.getElementById("email").value);
+    },
+   
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
