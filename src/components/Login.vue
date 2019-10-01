@@ -12,7 +12,7 @@
 <script>
 
   function isEmail(email){
-      debugger
+      
       var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
       return regex.test(email);
 
@@ -25,8 +25,7 @@ export default {
   },
    methods: {
     updateValue: function () {
-     console.log(this.props)
-     debugger
+    
      if(isEmail(document.getElementById("email").value))
       this.$emit('input', document.getElementById("email").value);
     },

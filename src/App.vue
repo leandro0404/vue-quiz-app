@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Login   v-model="email" v-if="email === null"/>
-    <Question  v-if="email !== null"  :anwswer="anwswers[questionsAnswered]" />
+    <Question v-model="questionsAnswered" v-if="email !== null"  :anwswer="anwswers[questionsAnswered]" />
   </div>
 </template>
 
