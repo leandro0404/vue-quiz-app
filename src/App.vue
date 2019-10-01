@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Login   v-model="email" v-if="email === null"/>
-    <Question v-on:save="onSave" v-if="email !== null && !endGame"  :showConfirm="showConfirm" :anwswer="anwswers[questionsAnswered]" />
+    <Question v-on:save="onSave" v-if="email !== null && !endGame"  :showConfirm="showConfirm" :anwswer="anwswers[questionsAnswered]"  :questionsCount="questionsCount" :questionsAnswered="questionsAnswered"/>
     <Score  :score='score' :questionsAnswered="questionsAnswered"  v-if="endGame"/>
   </div>
 </template>
@@ -18,6 +18,7 @@ export default {
     return {
             score : 0,
             questionsAnswered :0,
+            questionsCount : data.length,
             showConfirm : false,
             email : null,
             start :false,

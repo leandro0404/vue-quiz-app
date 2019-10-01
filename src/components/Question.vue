@@ -1,5 +1,6 @@
 <template>
-    <div id="frame">            
+    <div id="frame">   
+      <p class="pager" id="pager">pergunta {{ (questionsAnswered)+1 }} de  {{ questionsCount }} </p>         
         <h2 class="pergunta" id="pergunta"> {{ anwswer.pergunta }}</h2>
         <p class="descricaoRespostaCorreta" id="descricaoRespostaCorreta">&nbsp;</p>
         <ul id="choice-block">   
@@ -18,7 +19,9 @@ export default {
   name: 'Question',
   props: {
     anwswer : Object,
-    showConfirm : Boolean
+    showConfirm : Boolean,
+    questionsAnswered : Number,
+    questionsCount : Number
     
   },
   methods:{
