@@ -11,7 +11,7 @@
 export default {
   name: 'Score',
   props: {
-    score: String,
+    score: Number,
     questionsAnswered: Number
   }
 }

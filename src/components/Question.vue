@@ -17,9 +17,13 @@
 <script>
 export default {
   name: 'Question',
+  data(){
+     return {
+       showConfirm : false
+     }
+  },
   props: {
     anwswer : Object,
-    showConfirm : Boolean,
     questionsAnswered : Number,
     questionsCount : Number
     
