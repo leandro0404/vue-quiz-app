@@ -1,29 +1,12 @@
 
+ **App quiz criado em vue.**
 
-## Project setup
-```
-yarn install
-```
+  * tela de e-mail
+![alt text](https://github.com/leandro0404/vue-quiz-app/blob/master/images/01.png)
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+ * perguntas
+![alt text](https://github.com/leandro0404/vue-quiz-app/blob/master/images/02.png)
 
-### Compiles and minifies for production
-```
-yarn run build
-```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+ * resultado
+![alt text](https://github.com/leandro0404/vue-quiz-app/blob/master/images/03.png)
